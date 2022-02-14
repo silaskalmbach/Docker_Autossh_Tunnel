@@ -2,6 +2,9 @@
 
 Minimal Dockerfile to pass any number of ports with autossh through an ssh tunnel. The Dockerfile is designed to allow ssh-keygen to be included without linking them in a separate volume. Well suited to include them in IoT services like Balena.
 
+To do this, add your ssh key to the folder "ssh_key" and specify it's name in docker-compose.
+If you don't want to use an ssh key, just remove the part <code> "-i /ssh_key/${KEYNAME}"\ </code>  from the tunnel.sh file.
+
 ### Docker-Compose example, as it can also be found in the repository:
 
 ```yaml
